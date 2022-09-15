@@ -1,0 +1,5 @@
+*.vsidx
+*.lock
+*.suo
+WpfSampleApp/WpfSampleApp/obj/
+WpfSampleApp/WpfSampleApp/bin/
