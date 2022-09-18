@@ -4,3 +4,11 @@
 WpfSampleApp/WpfSampleApp/obj/
 WpfSampleApp/WpfSampleApp/bin/
 WpfSampleApp/.vs/
+WpfSampleApp/WpfSampleApp.Command/bin/
+WpfSampleApp/WpfSampleApp.Command/obj/
+*.json
+*.dll
+*.pdb
+WpfSampleApp/WpfSampleApp.Interface/obj/
+WpfSampleApp/WpfSampleApp.Model/obj/
+WpfSampleApp/WpfSampleApp.ViewModel/obj/
