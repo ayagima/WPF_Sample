@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="WpfSampleApp.View.MenuUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfSampleApp.View"
+             mc:Ignorable="d">
+    <ListView>
+        <ListViewItem Content="Sample1" />
+        <ListViewItem Content="Sample2" />
+        <ListViewItem Content="Sample3" />
+        <ListViewItem Content="Sample4" />
+        <ListViewItem Content="Sample5" />
+        <ListViewItem Content="Sample6" />
+    </ListView>
+</UserControl>
