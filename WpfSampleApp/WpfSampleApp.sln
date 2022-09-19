@@ -5,13 +5,15 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSampleApp.View", "WpfSampleApp\WpfSampleApp.View.csproj", "{D6153FDD-21DD-4F4C-A608-6D7A2DD83B16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSampleApp.ViewModel", "WpfSampleApp.ViewModel\WpfSampleApp.ViewModel.csproj", "{6FC61245-EF99-4D8B-B76D-251E679ADEA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSampleApp.ViewModel", "WpfSampleApp.ViewModel\WpfSampleApp.ViewModel.csproj", "{6FC61245-EF99-4D8B-B76D-251E679ADEA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSampleApp.Command", "WpfSampleApp.Command\WpfSampleApp.Command.csproj", "{DC9C2612-E8F8-43FF-9973-5E5175E01AB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSampleApp.Command", "WpfSampleApp.Command\WpfSampleApp.Command.csproj", "{DC9C2612-E8F8-43FF-9973-5E5175E01AB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSampleApp.Interface", "WpfSampleApp.Interface\WpfSampleApp.Interface.csproj", "{71EDDA32-DA51-4B97-BE03-33961B034B64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSampleApp.Interface", "WpfSampleApp.Interface\WpfSampleApp.Interface.csproj", "{71EDDA32-DA51-4B97-BE03-33961B034B64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSampleApp.Model", "WpfSampleApp.Model\WpfSampleApp.Model.csproj", "{E080586E-8D2A-472D-9330-273BB93DEB50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSampleApp.Model", "WpfSampleApp.Model\WpfSampleApp.Model.csproj", "{E080586E-8D2A-472D-9330-273BB93DEB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSampleApp.Controls", "WpfSampleApp.Controls\WpfSampleApp.Controls.csproj", "{32F8EC2D-9BAF-4919-9C40-A00DA9980800}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E080586E-8D2A-472D-9330-273BB93DEB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E080586E-8D2A-472D-9330-273BB93DEB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E080586E-8D2A-472D-9330-273BB93DEB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F8EC2D-9BAF-4919-9C40-A00DA9980800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F8EC2D-9BAF-4919-9C40-A00DA9980800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F8EC2D-9BAF-4919-9C40-A00DA9980800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F8EC2D-9BAF-4919-9C40-A00DA9980800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
