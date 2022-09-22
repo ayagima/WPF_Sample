@@ -8,16 +8,36 @@
              mc:Ignorable="d">
     <i:Interaction.Triggers>
         <i:EventTrigger>
-            <i:InvokeCommandAction Command="{Binding MenuLoadCommand}" CommandParameter="{Binding MenuLoadCommandParam}"/>
+            <i:InvokeCommandAction Command="{Binding LoadingMenuCmd}" 
+                                   CommandParameter="{Binding LoadingMenuCmdParam}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    
-    <TreeView x:Name="lvwMenu"
+
+    <ListView x:Name="lvwMenu"
               ItemsSource="{Binding Menu}">
-        <TreeView.ItemTemplate>
+        <ListView.ItemContainerStyle>
+            <Style TargetType="{x:Type ListViewItem}" >
+                <Setter Property="IsSelected" Value="{Binding IsSelected}" />
+            </Style>
+        </ListView.ItemContainerStyle>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="SelectionChanged">
+                <i:InvokeCommandAction Command="{Binding SelectionChangedCmd}"
+                                       CommandParameter="{Binding SelectionChangedCmdParam}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <ListView.ItemTemplate>
             <DataTemplate>
-                <TextBlock Text="{Binding Name}" />
+                <ContentControl>
+                    <!--<i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TreeView.SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding Command}" 
+                                       CommandParameter="{Binding MenuItemCommandParam}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>-->
+                    <TextBlock Text="{Binding Title}" />
+                </ContentControl>
             </DataTemplate>
-        </TreeView.ItemTemplate>
-    </TreeView>
+        </ListView.ItemTemplate>
+    </ListView>
 </UserControl>

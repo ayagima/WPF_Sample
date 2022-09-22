@@ -11,29 +11,33 @@ namespace WpfSampleApp.ViewModel.Main
     {
         public IEnumerable<MenuItem> Menu { get => _menu; }
         public IMainWindowVM MainWindowVM { get => _mainWindowVM; }
-        public ICommand MenuLoadCommand { get => _menuLoadCommand; }
-        public object? MenuLoadCommandParam { get => _menuLoadCommandParam; }
+        public ICommand LoadingMenuCmd { get => _menuLoadCmd; }
+        public object? LoadingMenuCmdParam { get => _menuLoadCmdParam; }
+        public ICommand SelectionChangedCmd { get => _selectionChangedCmd; }
+        public object? SelectionChangedCmdParam { get => _selectionChangedCmdParam; }
+        public IMenuItem? SelectedMenuItem { get => Menu.Where(q => q.IsSelected == true).FirstOrDefault(); }
 
         private ObservableCollection<MenuItem> _menu = new ObservableCollection<MenuItem>();
         private IMainWindowVM _mainWindowVM;
-        private LoadingMenuCommand _menuLoadCommand;
-        private object _menuLoadCommandParam;
+        private LoadingMenuCommand _menuLoadCmd;
+        private object _menuLoadCmdParam;
+        private SelectionChangedCommand _selectionChangedCmd;
+        private object _selectionChangedCmdParam;
 
         public MenuUserControlVM(IMainWindowVM mainWindowVM)
         {
             _mainWindowVM = mainWindowVM;
-            _menuLoadCommand = LoadingMenuCommand.Instance;
-            _menuLoadCommandParam = this;
+            _menuLoadCmd = LoadingMenuCommand.Instance;
+            _menuLoadCmdParam = this;
+            _selectionChangedCmd = SelectionChangedCommand.Instance;
+            _selectionChangedCmdParam = this;
         }
-
-        public void Add(INotifyPropertyChanged vm)
+        public void MakeMenu(IMenuItemCommand command)
         {
-            var item = vm as MenuItem;
-            if (item == null)
-                return;
-            _menu.Add(item);
+            if (command is null)
+                throw new ArgumentNullException(nameof(command));
+            _menu.Add(new MenuItem(command));
         }
-
         public void AllClear()
         {
             _menu.Clear();

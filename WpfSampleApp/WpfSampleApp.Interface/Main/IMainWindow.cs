@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows.Input;
 
 namespace WpfSampleApp.Interface.Main
 {
@@ -8,7 +9,19 @@ namespace WpfSampleApp.Interface.Main
 
     public interface IMenu
     {
-        void Add(INotifyPropertyChanged vm);
+        IMenuItem? SelectedMenuItem { get; }
+        void MakeMenu(IMenuItemCommand command);
         void AllClear();
+    }
+
+    public interface IMenuItem
+    {
+        string Title { get; }
+        ICommand Command { get; }
+    }
+
+    public interface IMenuItemCommand : ICommand
+    {
+        string Title { get; }
     }
 }

@@ -1,22 +1,25 @@
-﻿using WpfSampleApp.Interface.Main;
+﻿using System.Windows.Input;
+using WpfSampleApp.Interface.Main;
 using WpfSampleApp.ViewModel.Common;
 
 namespace WpfSampleApp.ViewModel.Main
 {
-    public class MenuItem : BaseVM
+    public class MenuItem : BaseVM, IMenuItem
     {
-        public string Name { get => _name; }
+        public string Title { get => _title; }
+        public ICommand Command { get => _command; }
+        public object? MenuItemCommandParam { get => _menuItemCommandParam; }
+        public bool IsSelected { get; set; }
 
-        private string _name = "サンプル";
+        private string _title;
+        private ICommand _command;
+        private object? _menuItemCommandParam;
 
-        public static MenuItem Create()
+        public MenuItem(IMenuItemCommand command)
         {
-            var instance = new MenuItem();
-            return instance;
-        }
-
-        public MenuItem()
-        {
+            _title = command.Title;
+            _command = command;
+            _menuItemCommandParam = this;
         }
     }
 }

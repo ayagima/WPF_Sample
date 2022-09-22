@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using WpfSampleApp.Command.Menu;
 using WpfSampleApp.Interface.Main;
 
 namespace WpfSampleApp.Command.Main
@@ -19,6 +20,11 @@ namespace WpfSampleApp.Command.Main
             var menu = parameter as IMenu;
             if (menu == null)
                 return;
+
+            menu.MakeMenu(DroppedImageMenuCommand.Instance);
+            menu.MakeMenu(DroppedImageMenuCommand.Instance);
+            menu.MakeMenu(DroppedImageMenuCommand.Instance);
+            menu.MakeMenu(DroppedImageMenuCommand.Instance);
         }
     }
 }
