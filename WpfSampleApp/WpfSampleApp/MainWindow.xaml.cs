@@ -1,16 +1,20 @@
 ﻿using System.Windows;
-using WpfSampleApp.Interface.Main;
+using WpfSampleApp.ViewModel.Main;
 
 namespace WpfSampleApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IMainWindow
+    public partial class MainWindow : Window
     {
+        private MainWindowVM _mainWindowVM;
+
         public MainWindow()
         {
             InitializeComponent();
+            _mainWindowVM = new MainWindowVM();
+            DataContext = _mainWindowVM;
         }
     }
 }

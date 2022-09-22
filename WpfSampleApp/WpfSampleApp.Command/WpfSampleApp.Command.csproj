@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WpfSampleApp.Interface\WpfSampleApp.Interface.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WpfSampleApp.Interface.Main;
 using WpfSampleApp.ViewModel.Common;
 
 namespace WpfSampleApp.ViewModel.Main
 {
-    public class MainWindowVM : BaseVM
+    public class MainWindowVM : BaseVM, IMainWindowVM
     {
+        public IMenu MenuCtrlVM { get => _menuCtrlVM; }
+
+        private IMenu _menuCtrlVM;
+
         public MainWindowVM()
         {
+            _menuCtrlVM = new MenuUserControlVM(this);
         }
     }
 }

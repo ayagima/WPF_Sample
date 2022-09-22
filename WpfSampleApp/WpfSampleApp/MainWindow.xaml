@@ -7,17 +7,13 @@
         xmlns:vm="clr-namespace:WpfSampleApp.ViewModel.Main;assembly=WpfSampleApp.ViewModel" 
         xmlns:view="clr-namespace:WpfSampleApp.View"
         mc:Ignorable="d">
-    <Window.DataContext>
-        <ObjectDataProvider ObjectType="vm:MainWindowVM" />
-    </Window.DataContext>
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="10"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <view:MenuUserControl Grid.Column="0"/>
+        <view:MenuUserControl Grid.Column="0" DataContext="{Binding MenuCtrlVM}"/>
         <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
         <TextBlock Text="サンプル表示" Grid.Column="2" />
     </Grid>

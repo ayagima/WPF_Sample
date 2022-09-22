@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WpfSampleApp.Command\WpfSampleApp.Command.csproj" />
+    <ProjectReference Include="..\WpfSampleApp.Interface\WpfSampleApp.Interface.csproj" />
   </ItemGroup>
 
 </Project>

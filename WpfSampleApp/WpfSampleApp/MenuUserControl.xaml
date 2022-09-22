@@ -4,13 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfSampleApp.View"
+             xmlns:vm="clr-namespace:WpfSampleApp.ViewModel.Main;assembly=WpfSampleApp.ViewModel" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d">
-    <ListView>
-        <ListViewItem Content="Sample1" />
-        <ListViewItem Content="Sample2" />
-        <ListViewItem Content="Sample3" />
-        <ListViewItem Content="Sample4" />
-        <ListViewItem Content="Sample5" />
-        <ListViewItem Content="Sample6" />
-    </ListView>
+    <UserControl.DataContext>
+        <ObjectDataProvider ObjectType="vm:MenuUserControlVM" />
+    </UserControl.DataContext>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger>
+            <i:InvokeCommandAction Command="{Binding MenuLoadCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <TreeView x:Name="lvwMenu"
+              ItemsSource="{Binding Menu}">
+        <TreeView.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding Name}" />
+            </DataTemplate>
+        </TreeView.ItemTemplate>
+    </TreeView>
 </UserControl>
