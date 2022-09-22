@@ -1,7 +1,7 @@
 ﻿using System.Windows.Input;
 using WpfSampleApp.Interface.Main;
 
-namespace WpfSampleApp.Command
+namespace WpfSampleApp.Command.Main
 {
     public class LoadingMenuCommand : ICommand
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
-using WpfSampleApp.Command;
+using WpfSampleApp.Command.Main;
 using WpfSampleApp.Interface.Main;
 using WpfSampleApp.ViewModel.Common;
 
