@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSampleApp"
-        xmlns:vm="clr-namespace:WpfSampleApp.ViewModel.Main;assembly=WpfSampleApp.ViewModel" 
         xmlns:view="clr-namespace:WpfSampleApp.View"
         mc:Ignorable="d">
     <Grid>

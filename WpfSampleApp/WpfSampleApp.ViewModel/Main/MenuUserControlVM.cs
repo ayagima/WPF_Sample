@@ -12,15 +12,18 @@ namespace WpfSampleApp.ViewModel.Main
         public IEnumerable<MenuItem> Menu { get => _menu; }
         public IMainWindowVM MainWindowVM { get => _mainWindowVM; }
         public ICommand MenuLoadCommand { get => _menuLoadCommand; }
+        public object? MenuLoadCommandParam { get => _menuLoadCommandParam; }
 
         private ObservableCollection<MenuItem> _menu = new ObservableCollection<MenuItem>();
         private IMainWindowVM _mainWindowVM;
         private LoadingMenuCommand _menuLoadCommand;
+        private object _menuLoadCommandParam;
 
         public MenuUserControlVM(IMainWindowVM mainWindowVM)
         {
             _mainWindowVM = mainWindowVM;
             _menuLoadCommand = LoadingMenuCommand.Instance;
+            _menuLoadCommandParam = this;
         }
 
         public void Add(INotifyPropertyChanged vm)
