@@ -7,15 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MenuUserControl.xaml.cs">
+    <Compile Update="Main\Menu\MenuUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Main\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MenuUserControl.xaml">
+    <Page Update="Main\Menu\MenuUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
