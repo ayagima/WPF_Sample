@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-using System.Windows.Input;
-using WpfSampleApp.Interface.Main;
+﻿using WpfSampleApp.Interface.Main;
 
 namespace WpfSampleApp.Command.Main.Menu
 {
@@ -18,7 +16,15 @@ namespace WpfSampleApp.Command.Main.Menu
 
         public void Execute(object? parameter)
         {
-            Console.WriteLine("テストメッセージ");
+            var menu = parameter as IMenu;
+            if (menu == null)
+                return;
+
+            var menuItem = menu.SelectedMenuItem;
+            if (menuItem is null)
+                return;
+
+            menuItem.Show();
         }
     }
 }

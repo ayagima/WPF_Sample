@@ -21,5 +21,10 @@ namespace WpfSampleApp.ViewModel.Main.Manu
             _command = command;
             _menuItemCommandParam = this;
         }
+
+        public void Show()
+        {
+            
+        }
     }
 }

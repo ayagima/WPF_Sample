@@ -18,6 +18,7 @@ namespace WpfSampleApp.Interface.Main
     {
         string Title { get; }
         ICommand Command { get; }
+        void Show();
     }
 
     public interface IMenuItemCommand : ICommand
