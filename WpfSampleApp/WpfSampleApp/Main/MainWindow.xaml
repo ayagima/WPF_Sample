@@ -14,6 +14,6 @@
         </Grid.ColumnDefinitions>
         <view:MenuUserControl Grid.Column="0" DataContext="{Binding MenuCtrlVM}"/>
         <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
-        <DockPanel Grid.Column="2" />
+        <ContentControl Grid.Column="2" Content="{Binding SubView}"/>
     </Grid>
 </Window>
