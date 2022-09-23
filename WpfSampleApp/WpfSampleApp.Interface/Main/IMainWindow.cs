@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace WpfSampleApp.Interface.Main
@@ -18,11 +19,13 @@ namespace WpfSampleApp.Interface.Main
     {
         string Title { get; }
         ICommand Command { get; }
+        UserControl ViewCtrl { get; }
         void Show();
     }
 
     public interface IMenuItemCommand : ICommand
     {
         string Title { get; }
+        UserControl ViewCtrl { get; }
     }
 }

@@ -8,7 +8,7 @@ namespace WpfSampleApp.ViewModel.Main
     public class MainWindowVM : BaseVM, IMainWindowVM
     {
         public IMenu MenuCtrlVM { get => _menuCtrlVM; }
-        public UserControl? SubView { get => null; }
+        public UserControl? SubView { get => _menuCtrlVM.SelectedMenuItem?.ViewCtrl; }
 
         private IMenu _menuCtrlVM;
 
