@@ -6,10 +6,12 @@ namespace WpfSampleApp.Interface.Main
 {
     public interface IMainWindowVM
     {
+        void UpdateSubView();
     }
 
     public interface IMenu
     {
+        IMainWindowVM MainWindowVM { get; }
         IMenuItem? SelectedMenuItem { get; }
         void MakeMenu(IMenuItemCommand command);
         void AllClear();
@@ -20,7 +22,6 @@ namespace WpfSampleApp.Interface.Main
         string Title { get; }
         ICommand Command { get; }
         UserControl ViewCtrl { get; }
-        void Show();
     }
 
     public interface IMenuItemCommand : ICommand

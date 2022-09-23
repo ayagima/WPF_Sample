@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfSampleApp.Interface.Main;
 
-namespace WpfSampleApp.View
+namespace WpfSampleApp.View.Main.Menu
 {
     /// <summary>
     /// MenuUserControl.xaml の相互作用ロジック

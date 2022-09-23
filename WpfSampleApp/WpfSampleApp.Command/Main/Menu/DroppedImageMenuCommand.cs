@@ -12,7 +12,7 @@ namespace WpfSampleApp.Command.Main.Menu
 
         public event EventHandler? CanExecuteChanged;
 
-        private UserControl _viewCtrl = null;
+        private DropImageUserControl _viewCtrl = new DropImageUserControl();
 
         public bool CanExecute(object? parameter)
         {
@@ -29,7 +29,7 @@ namespace WpfSampleApp.Command.Main.Menu
             if (menuItem is null)
                 return;
 
-            menuItem.Show();
+            menu.MainWindowVM.UpdateSubView();
         }
     }
 }

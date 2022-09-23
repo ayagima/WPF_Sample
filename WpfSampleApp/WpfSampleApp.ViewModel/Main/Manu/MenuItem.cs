@@ -25,10 +25,5 @@ namespace WpfSampleApp.ViewModel.Main.Manu
             _menuItemCommandParam = this;
             _viewCtrl = command.ViewCtrl;
         }
-
-        public void Show()
-        {
-            
-        }
     }
 }

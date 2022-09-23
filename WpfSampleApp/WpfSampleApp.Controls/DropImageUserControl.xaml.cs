@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfSampleApp.View.Main
+namespace WpfSampleApp.Controls
 {
     /// <summary>
     /// DropImageUserControl.xaml の相互作用ロジック

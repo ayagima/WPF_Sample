@@ -16,5 +16,10 @@ namespace WpfSampleApp.ViewModel.Main
         {
             _menuCtrlVM = new MenuUserControlVM(this);
         }
+
+        public void UpdateSubView()
+        {
+            OnPropertyChanged(nameof(this.SubView));
+        }
     }
 }
