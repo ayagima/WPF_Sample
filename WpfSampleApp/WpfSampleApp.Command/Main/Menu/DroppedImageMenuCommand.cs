@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using WpfSampleApp.Interface.Main;
 
-namespace WpfSampleApp.Command.Menu
+namespace WpfSampleApp.Command.Main.Menu
 {
     public class DroppedImageMenuCommand : IMenuItemCommand
     {

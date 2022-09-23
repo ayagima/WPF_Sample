@@ -2,7 +2,7 @@
 using WpfSampleApp.Interface.Main;
 using WpfSampleApp.ViewModel.Common;
 
-namespace WpfSampleApp.ViewModel.Main
+namespace WpfSampleApp.ViewModel.Main.Manu
 {
     public class MenuItem : BaseVM, IMenuItem
     {

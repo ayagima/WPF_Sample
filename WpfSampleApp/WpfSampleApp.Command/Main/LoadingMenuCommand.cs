@@ -1,5 +1,5 @@
 ﻿using System.Windows.Input;
-using WpfSampleApp.Command.Menu;
+using WpfSampleApp.Command.Main.Menu;
 using WpfSampleApp.Interface.Main;
 
 namespace WpfSampleApp.Command.Main
