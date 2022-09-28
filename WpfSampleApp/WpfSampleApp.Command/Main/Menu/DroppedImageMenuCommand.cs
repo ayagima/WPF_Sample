@@ -29,10 +29,10 @@ namespace WpfSampleApp.Command.Main.Menu
                 return;
 
 
-            if (menu.MainWindowVM.DropImageUserCtrlVM.SubViewVisibility == Visibility.Visible)
+            if (menu.MainWindowVM.SubViewUserCtrlVM.Visibility == Visibility.Visible)
                 return;
 
-            menu.MainWindowVM.DropImageUserCtrlVM.SubViewVisibility = Visibility.Visible;
+            menu.MainWindowVM.SubViewUserCtrlVM.Visibility = Visibility.Visible;
         }
     }
 }

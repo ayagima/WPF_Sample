@@ -9,14 +9,16 @@ namespace WpfSampleApp.ViewModel.Main
     public class MainWindowVM : BaseVM, IMainWindowVM
     {
         public IMenu MenuCtrlVM { get => _menuCtrlVM; }
-        public ISubView DropImageUserCtrlVM { get => _dropImageUserCtrlVM; }
+        public ISubView SubViewUserCtrlVM { get => _dropImageUserCtrlVM; }
 
         private IMenu _menuCtrlVM;
-        private ISubView _dropImageUserCtrlVM;
+        private ISubView? _subViewUserCtrlVM;
+        private DropImageUserControlVM _dropImageUserCtrlVM;
 
         public MainWindowVM()
         {
             _menuCtrlVM = new MenuUserControlVM(this);
+            _subViewUserCtrlVM = null;
             _dropImageUserCtrlVM = new DropImageUserControlVM(this);
         }
     }

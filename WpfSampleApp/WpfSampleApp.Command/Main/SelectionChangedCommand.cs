@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfSampleApp.Command.Main.Menu;
 using WpfSampleApp.Interface.Main;
 
 namespace WpfSampleApp.Command.Main
@@ -29,7 +30,14 @@ namespace WpfSampleApp.Command.Main
             if (selectedMenu is null)
                 return;
 
-            selectedMenu.Command.Execute(parameter);
+            var mainWindow = menu.MainWindowVM;
+            mainWindow.SubViewUserCtrlVM.Visibility = System.Windows.Visibility.Collapsed;
+            switch (selectedMenu.Command)
+            {
+                case DroppedImageMenuCommand:
+                    selectedMenu.Command.Execute(parameter);
+                    break;
+            }
         }
     }
 }

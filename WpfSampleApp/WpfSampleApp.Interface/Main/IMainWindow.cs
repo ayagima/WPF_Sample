@@ -8,7 +8,7 @@ namespace WpfSampleApp.Interface.Main
     public interface IMainWindowVM
     {
         IMenu MenuCtrlVM { get; }
-        ISubView DropImageUserCtrlVM { get; }
+        ISubView SubViewUserCtrlVM { get; }
     }
 
     public interface IMenu
@@ -22,7 +22,7 @@ namespace WpfSampleApp.Interface.Main
     public interface ISubView
     {
         IMainWindowVM MainWindowVM { get; }
-        Visibility SubViewVisibility { get; set; }
+        Visibility Visibility { get; set; }
     }
 
     public interface IMenuItem

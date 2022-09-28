@@ -1,32 +1,31 @@
 ﻿using System.Windows;
 using WpfSampleApp.Interface.Main;
 using WpfSampleApp.ViewModel.Common;
-using WpfSampleApp.ViewModel.Main;
 
 namespace WpfSampleApp.ViewModel
 {
     public class DropImageUserControlVM : BaseVM, ISubView
     {
-        public Visibility SubViewVisibility
+        public Visibility Visibility
         {
-            get => _subViewVisibility;
+            get => _visibility;
             set
             {
-                if (_subViewVisibility == value)
+                if (_visibility == value)
                     return;
-                _subViewVisibility = value;
-                OnPropertyChanged(nameof(SubViewVisibility));
+                _visibility = value;
+                OnPropertyChanged(nameof(Visibility));
             }
         }
         public IMainWindowVM MainWindowVM { get => _mainWindowVM; }
 
-        private Visibility _subViewVisibility;
+        private Visibility _visibility;
         private IMainWindowVM _mainWindowVM;
 
         public DropImageUserControlVM(IMainWindowVM mainWindowVM)
         {
             _mainWindowVM = mainWindowVM;
-            _subViewVisibility = Visibility.Collapsed;
+            _visibility = Visibility.Collapsed;
         }
     }
 }

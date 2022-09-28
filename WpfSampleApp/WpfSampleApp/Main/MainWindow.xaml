@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSampleApp"
         xmlns:view="clr-namespace:WpfSampleApp.View.Main.Menu" 
-        xmlns:controls="clr-namespace:WpfSampleApp.Controls;assembly=WpfSampleApp.Controls"
+        xmlns:vm="clr-namespace:WpfSampleApp.ViewModel;assembly=WpfSampleApp.ViewModel" 
+        xmlns:controls="clr-namespace:WpfSampleApp.Controls;assembly=WpfSampleApp.Controls" 
+        xmlns:convs="clr-namespace:WpfSampleApp.View.Converter"
         mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <controls:DropImageUserControl x:Key="DropImageUserCtrl" />
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -17,8 +25,14 @@
                               DataContext="{Binding MenuCtrlVM}"/>
         <GridSplitter Grid.Column="1" 
                       HorizontalAlignment="Stretch" />
-        <controls:DropImageUserControl Grid.Column="2"
-                                       DataContext="{Binding DropImageUserCtrlVM}"
-                                       Visibility="{Binding SubViewVisibility}" />
+        <ContentControl Grid.Column="2"
+                        DataContext="{Binding SubViewUserCtrlVM}"
+                        Visibility="{Binding Visibility}">
+            <ContentControl.Style>
+                <Style TargetType="{x:Type ContentControl}">
+                    <Setter Property="Content" Value="{StaticResource DropImageUserCtrl}"/>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
     </Grid>
 </Window>
