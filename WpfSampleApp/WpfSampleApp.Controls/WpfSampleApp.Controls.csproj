@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WpfSampleApp.ViewModel\WpfSampleApp.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="DropImageUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

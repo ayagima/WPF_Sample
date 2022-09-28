@@ -7,23 +7,23 @@ namespace WpfSampleApp.ViewModel.Main.Manu
 {
     public class MenuItem : BaseVM, IMenuItem
     {
+        public IMenu ParentMenu { get => _parentMenu; }
         public string Title { get => _title; }
         public ICommand Command { get => _command; }
         public object? MenuItemCommandParam { get => _menuItemCommandParam; }
         public bool IsSelected { get; set; }
-        public UserControl ViewCtrl { get => _viewCtrl; }
 
+        private IMenu _parentMenu;
         private string _title;
         private ICommand _command;
         private object? _menuItemCommandParam;
-        private UserControl _viewCtrl;
 
-        public MenuItem(IMenuItemCommand command)
+        public MenuItem(IMenu parentMenu, IMenuItemCommand command)
         {
+            _parentMenu = parentMenu;
             _title = command.Title;
             _command = command;
             _menuItemCommandParam = this;
-            _viewCtrl = command.ViewCtrl;
         }
     }
 }

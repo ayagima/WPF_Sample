@@ -1,5 +1,4 @@
-﻿using System.Windows.Controls;
-using WpfSampleApp.Controls;
+﻿using System.Windows;
 using WpfSampleApp.Interface.Main;
 
 namespace WpfSampleApp.Command.Main.Menu
@@ -8,11 +7,8 @@ namespace WpfSampleApp.Command.Main.Menu
     {
         public static DroppedImageMenuCommand Instance = new DroppedImageMenuCommand();
         public string Title { get => Resource.CMD_TITLE_DroppedImageMenu; }
-        public UserControl ViewCtrl { get => _viewCtrl; }
 
         public event EventHandler? CanExecuteChanged;
-
-        private DropImageUserControl _viewCtrl = new DropImageUserControl();
 
         public bool CanExecute(object? parameter)
         {
@@ -25,11 +21,18 @@ namespace WpfSampleApp.Command.Main.Menu
             if (menu == null)
                 return;
 
-            var menuItem = menu.SelectedMenuItem;
-            if (menuItem is null)
+            var selectedMenu = menu.SelectedMenuItem;
+            if (selectedMenu is null)
                 return;
 
-            menu.MainWindowVM.UpdateSubView();
+            if (selectedMenu.IsSelected != true)
+                return;
+
+
+            if (menu.MainWindowVM.DropImageUserCtrlVM.SubViewVisibility == Visibility.Visible)
+                return;
+
+            menu.MainWindowVM.DropImageUserCtrlVM.SubViewVisibility = Visibility.Visible;
         }
     }
 }

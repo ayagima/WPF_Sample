@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WpfSampleApp.Interface\WpfSampleApp.Interface.csproj" />
+    <ProjectReference Include="..\WpfSampleApp.Controls\WpfSampleApp.Controls.csproj" />
     <ProjectReference Include="..\WpfSampleApp.ViewModel\WpfSampleApp.ViewModel.csproj" />
   </ItemGroup>
 

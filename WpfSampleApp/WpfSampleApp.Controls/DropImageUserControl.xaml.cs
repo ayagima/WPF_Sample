@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using WpfSampleApp.ViewModel;
 
 namespace WpfSampleApp.Controls
 {

@@ -36,7 +36,7 @@ namespace WpfSampleApp.ViewModel.Main.Manu
         {
             if (command is null)
                 throw new ArgumentNullException(nameof(command));
-            _menu.Add(new MenuItem(command));
+            _menu.Add(new MenuItem(this, command));
         }
         public void AllClear()
         {

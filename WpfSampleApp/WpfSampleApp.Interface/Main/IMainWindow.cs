@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -6,7 +7,8 @@ namespace WpfSampleApp.Interface.Main
 {
     public interface IMainWindowVM
     {
-        void UpdateSubView();
+        IMenu MenuCtrlVM { get; }
+        ISubView DropImageUserCtrlVM { get; }
     }
 
     public interface IMenu
@@ -17,16 +19,23 @@ namespace WpfSampleApp.Interface.Main
         void AllClear();
     }
 
+    public interface ISubView
+    {
+        IMainWindowVM MainWindowVM { get; }
+        Visibility SubViewVisibility { get; set; }
+    }
+
     public interface IMenuItem
     {
+        IMenu ParentMenu { get; }
         string Title { get; }
         ICommand Command { get; }
-        UserControl ViewCtrl { get; }
+        bool IsSelected { get; set; }
+
     }
 
     public interface IMenuItemCommand : ICommand
     {
         string Title { get; }
-        UserControl ViewCtrl { get; }
     }
 }
