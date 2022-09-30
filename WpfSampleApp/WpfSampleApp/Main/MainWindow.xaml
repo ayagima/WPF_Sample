@@ -7,7 +7,6 @@
         xmlns:view="clr-namespace:WpfSampleApp.View.Main.Menu" 
         xmlns:vm="clr-namespace:WpfSampleApp.ViewModel;assembly=WpfSampleApp.ViewModel" 
         xmlns:controls="clr-namespace:WpfSampleApp.Controls;assembly=WpfSampleApp.Controls" 
-        xmlns:convs="clr-namespace:WpfSampleApp.View.Converter"
         mc:Ignorable="d">
     <Window.Resources>
         <ResourceDictionary>
