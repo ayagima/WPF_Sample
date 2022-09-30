@@ -8,18 +8,19 @@ namespace WpfSampleApp.ViewModel.Main
 {
     public class MainWindowVM : BaseVM, IMainWindowVM
     {
-        public IMenu MenuCtrlVM { get => _menuCtrlVM; }
-        public ISubView SubViewUserCtrlVM { get => _dropImageUserCtrlVM; }
-
         private IMenu _menuCtrlVM;
         private ISubView? _subViewUserCtrlVM;
+        private NoneUserControlVM _noneUserControlVM;
         private DropImageUserControlVM _dropImageUserCtrlVM;
 
         public MainWindowVM()
         {
             _menuCtrlVM = new MenuUserControlVM(this);
             _subViewUserCtrlVM = null;
+            _noneUserControlVM = new NoneUserControlVM(this);
             _dropImageUserCtrlVM = new DropImageUserControlVM(this);
         }
+        public IMenu MenuCtrlVM { get => _menuCtrlVM; }
+        public ISubView SubViewUserCtrlVM { get => _dropImageUserCtrlVM; }
     }
 }
