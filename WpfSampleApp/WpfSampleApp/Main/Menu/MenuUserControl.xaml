@@ -29,12 +29,6 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ContentControl>
-                    <!--<i:Interaction.Triggers>
-                        <i:EventTrigger EventName="TreeView.SelectionChanged">
-                            <i:InvokeCommandAction Command="{Binding Command}" 
-                                       CommandParameter="{Binding MenuItemCommandParam}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>-->
                     <TextBlock Text="{Binding Title}" />
                 </ContentControl>
             </DataTemplate>
