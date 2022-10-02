@@ -5,7 +5,7 @@ using WpfSampleApp.ViewModel.Common;
 
 namespace WpfSampleApp.ViewModel.Main.Manu
 {
-    public class MenuItem : BaseVM, IMenuItem
+    public class MenuItemVM : BaseVM, IMenuItem
     {
         public IMenu ParentMenu { get => _parentMenu; }
         public string Title { get => _title; }
@@ -18,7 +18,7 @@ namespace WpfSampleApp.ViewModel.Main.Manu
         private ICommand _command;
         private object? _menuItemCommandParam;
 
-        public MenuItem(IMenu parentMenu, IMenuItemCommand command)
+        public MenuItemVM(IMenu parentMenu, IMenuItemCommand command)
         {
             _parentMenu = parentMenu;
             _title = command.Title;

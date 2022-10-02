@@ -9,7 +9,7 @@ namespace WpfSampleApp.ViewModel.Main.Manu
 {
     public class MenuUserControlVM : BaseVM, IMenu
     {
-        public IEnumerable<MenuItem> Menu { get => _menu; }
+        public IEnumerable<MenuItemVM> Menu { get => _menu; }
         public IMainWindowVM MainWindowVM { get => _mainWindowVM; }
         public ICommand LoadingMenuCmd { get => _menuLoadCmd; }
         public object? LoadingMenuCmdParam { get => _menuLoadCmdParam; }
@@ -17,7 +17,7 @@ namespace WpfSampleApp.ViewModel.Main.Manu
         public object? SelectionChangedCmdParam { get => _selectionChangedCmdParam; }
         public IMenuItem? SelectedMenuItem { get => Menu.Where(q => q.IsSelected == true).FirstOrDefault(); }
 
-        private ObservableCollection<MenuItem> _menu = new ObservableCollection<MenuItem>();
+        private ObservableCollection<MenuItemVM> _menu = new ObservableCollection<MenuItemVM>();
         private IMainWindowVM _mainWindowVM;
         private LoadingMenuCommand _menuLoadCmd;
         private object _menuLoadCmdParam;
@@ -36,7 +36,7 @@ namespace WpfSampleApp.ViewModel.Main.Manu
         {
             if (command is null)
                 throw new ArgumentNullException(nameof(command));
-            _menu.Add(new MenuItem(this, command));
+            _menu.Add(new MenuItemVM(this, command));
         }
         public void AllClear()
         {
