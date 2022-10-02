@@ -12,6 +12,7 @@ namespace WpfSampleApp.ViewModel.Main
         private ISubView _subViewUserCtrlVM;
         private NoneUserControlVM _noneUserControlVM;
         private DropImageUserControlVM _dropImageUserCtrlVM;
+        private SubViewType _selectionViewType;
 
         public MainWindowVM()
         {
@@ -19,9 +20,21 @@ namespace WpfSampleApp.ViewModel.Main
             _noneUserControlVM = new NoneUserControlVM(this);
             _dropImageUserCtrlVM = new DropImageUserControlVM(this);
             _subViewUserCtrlVM = _noneUserControlVM;
+            SelectionViewType = SubViewType.None;
         }
         public IMenu MenuCtrlVM { get => _menuCtrlVM; }
         public ISubView SubViewUserCtrlVM { get => _subViewUserCtrlVM; }
-        public SubViewType SelectionViewType { get => _subViewUserCtrlVM.Type; }
+        public SubViewType SelectionViewType 
+        {
+            get
+            {
+                return _selectionViewType;
+            }
+            set
+            {
+                _selectionViewType = value;
+                OnPropertyChanged(nameof(SelectionViewType));
+            }
+        }
     }
 }

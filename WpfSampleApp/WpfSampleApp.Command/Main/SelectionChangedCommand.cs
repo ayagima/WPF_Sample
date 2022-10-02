@@ -31,13 +31,15 @@ namespace WpfSampleApp.Command.Main
                 return;
 
             var mainWindow = menu.MainWindowVM;
-            mainWindow.SubViewUserCtrlVM.Visibility = System.Windows.Visibility.Collapsed;
-            switch (selectedMenu.Command)
-            {
-                case DroppedImageMenuCommand:
-                    selectedMenu.Command.Execute(parameter);
-                    break;
-            }
+
+            mainWindow.SelectionViewType = SubViewType.DropImage;
+            //mainWindow.SubViewUserCtrlVM.Visibility = System.Windows.Visibility.Collapsed;
+            //switch (selectedMenu.Command)
+            //{
+            //    case DroppedImageMenuCommand:
+            //        selectedMenu.Command.Execute(parameter);
+            //        break;
+            //}
         }
     }
 }

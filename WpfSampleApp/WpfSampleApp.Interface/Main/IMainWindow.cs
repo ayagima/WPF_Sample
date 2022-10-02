@@ -9,6 +9,7 @@ namespace WpfSampleApp.Interface.Main
     {
         IMenu MenuCtrlVM { get; }
         ISubView SubViewUserCtrlVM { get; }
+        SubViewType SelectionViewType { get; set; }
     }
 
     public interface IMenu
