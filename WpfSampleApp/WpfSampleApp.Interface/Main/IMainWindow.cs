@@ -23,6 +23,7 @@ namespace WpfSampleApp.Interface.Main
     {
         IMainWindowVM MainWindowVM { get; }
         Visibility Visibility { get; set; }
+        SubViewType Type { get; }
     }
 
     public interface IMenuItem
@@ -37,5 +38,11 @@ namespace WpfSampleApp.Interface.Main
     public interface IMenuItemCommand : ICommand
     {
         string Title { get; }
+    }
+
+    public enum SubViewType
+    {
+        None = 0,
+        DropImage,
     }
 }

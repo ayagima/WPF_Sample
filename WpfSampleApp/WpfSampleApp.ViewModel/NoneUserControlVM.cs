@@ -28,5 +28,7 @@ namespace WpfSampleApp.ViewModel
                 OnPropertyChanged(nameof(Visibility));
             }
         }
+
+        public SubViewType Type { get => SubViewType.None; }
     }
 }
